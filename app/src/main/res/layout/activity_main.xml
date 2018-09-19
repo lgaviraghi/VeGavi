@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.MainActivity">
+
+    <TextView
+        android:id="@+id/testo_crocerossa"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="@dimen/default_dimen_value"
+        android:layout_marginTop="@dimen/default_dimen_value"
+        android:gravity="center"
+        android:text="@string/splash_page_title"
+        android:textColor="@android:color/holo_red_dark"
+        android:textSize="@dimen/default_dimen_title_activity"
+
+        app:layout_constraintBottom_toTopOf="@+id/scenario_button"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_default="percent" />
+
+    <Button
+        android:id="@+id/scenario_button"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_margin="@dimen/default_dimen_value"
+        android:background="@drawable/custom_button"
+        android:text="@string/splash_paage_button_scenari"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/default_dimen_value"
+
+        app:layout_constraintBottom_toTopOf="@+id/video_tutorial"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/video_tutorial"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_margin="@dimen/default_dimen_value"
+        android:background="@drawable/custom_button"
+        android:text="@string/splash_paage_button_video_tutorial"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/default_dimen_value"
+
+        app:layout_constraintBottom_toTopOf="@+id/test"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/test"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_margin="@dimen/default_dimen_value"
+        android:background="@drawable/custom_button"
+        android:text="@string/splash_paage_button_test"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/default_dimen_value"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guidelineLeft"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.25" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guidelineRight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.75" />
+
+</android.support.constraint.ConstraintLayout>

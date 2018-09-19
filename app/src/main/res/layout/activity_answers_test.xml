@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/titleSectionTest"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/default_dimen_value"
+
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/default_dimen_title_activity"
+        android:textStyle="bold"
+
+        app:layout_constraintBottom_toTopOf="@+id/answer"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_default="percent" />
+    <!--android:text="@string/title_answer1_test"-->
+
+    <TextView
+        android:id="@+id/answer"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+
+        android:gravity="center_vertical"
+        android:padding="@dimen/default_dimen_value"
+
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/default_dimen_value"
+
+        app:layout_constraintBottom_toTopOf="@+id/radioGroupAnswer"
+        app:layout_constraintTop_toBottomOf="@id/titleSectionTest"
+        app:layout_constraintWidth_default="percent" />
+    <!--android:text="@string/body_answer1_test"-->
+
+    <RadioGroup
+        android:id="@+id/radioGroupAnswer"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:padding="@dimen/default_dimen_value"
+        app:layout_constraintBottom_toTopOf="@+id/startTest"
+        app:layout_constraintTop_toBottomOf="@id/answer"
+        app:layout_constraintWidth_default="percent">
+
+        <RadioButton
+            android:id="@+id/choice_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <RadioButton
+            android:id="@+id/choice_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <RadioButton
+            android:id="@+id/choice_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <RadioButton
+            android:id="@+id/choice_4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+
+    </RadioGroup>
+
+
+    <Button
+        android:id="@+id/startTest"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+
+        android:layout_margin="@dimen/default_dimen_value"
+        android:layout_marginBottom="@dimen/default_dimen_value"
+        android:layout_marginTop="@dimen/default_dimen_value"
+
+        android:background="@drawable/custom_button"
+        android:text="@string/activity_text_button_start_test"
+        android:textColor="@android:color/white"
+
+        android:textStyle="bold"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/next"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/next"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+
+        android:layout_margin="@dimen/default_dimen_value"
+        android:layout_marginBottom="@dimen/default_dimen_value"
+        android:layout_marginTop="@dimen/default_dimen_value"
+
+        android:background="@drawable/custom_button"
+        android:text="PROSSIMA DOMANDA"
+        android:textColor="@android:color/white"
+
+        android:textStyle="bold"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/startTest" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guidelineLeft"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" />
+    <!--      app:layout_constraintGuide_percent="0.25" -->
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guidelineRight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" />
+    <!--       app:layout_constraintGuide_percent="0.75" -->
+
+
+</android.support.constraint.ConstraintLayout>

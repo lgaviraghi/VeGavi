@@ -1,0 +1,33 @@
+<resources>
+    <string name="app_name">Volontari Croce Rossa</string>
+
+    <!--main activity-->
+    <string name="splash_page_title">VOLONTARI \nCROCE \nROSSA</string>
+    <string name="splash_paage_button_scenari">SCENARI</string>
+    <string name="splash_paage_button_video_tutorial">VIDEO TUTORIAL</string>
+    <string name="splash_paage_button_test">TEST</string>
+
+
+    <!--TEST-->
+    <!-- activity_welcome_test.xml-->
+    <string name="activity_test_title">Benvenuto nella sezione Test!</string>
+    <string name="activity_text_explain">In questa sezione potrai scegliere il test da effettuare.
+        Ogni domanda ha quatto scelte possibili di cui solo una è la risposta corretta.
+        \nAl termine del test potrai verificare il tuo punteggio finale.</string>
+    <string name="activity_text_button_start_test">SCEGLI IL TEST DA SVOLGERE</string>
+    <!-- item_test.xml-->
+    <string name="section_test_title">Titolo Principale</string>
+    <string name="section_test_chapter">Capitolo e descrizone test</string>
+
+
+    <!--activity_answers_test-->
+
+    <!--answer 1
+    <string name="title_answer1_test">Domanda 1:</string>
+    <string name="body_answer1_test">Schiaccia il bottone "Prova 1"</string>
+    <string name="choice1_test">Prova 1</string>
+    <string name="choice2_test">-</string>
+    <string name="choice3_test">-</string>
+    <string name="choice4_test">-</string>
+-->
+</resources>
