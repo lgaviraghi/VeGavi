@@ -8,12 +8,12 @@ import android.widget.ArrayAdapter;
 import android.widget.TextView;
 
 import com.example.gavir.appcrocerossa.R;
-import com.example.gavir.appcrocerossa.SupportJavaClass.TitleTest;
+import com.example.gavir.appcrocerossa.SupportJavaClass.TitleOfTest;
 
 import java.util.ArrayList;
 
-public class CustomTitleTestAdapter extends ArrayAdapter<TitleTest> {
-    public CustomTitleTestAdapter(Context context, ArrayList<TitleTest> tests) {
+public class CustomTitleTestAdapter extends ArrayAdapter<TitleOfTest> {
+    public CustomTitleTestAdapter(Context context, ArrayList<TitleOfTest> tests) {
         super(context, 0, tests);
     }
 
@@ -24,16 +24,14 @@ public class CustomTitleTestAdapter extends ArrayAdapter<TitleTest> {
         if (convertView == null) {
             convertView = LayoutInflater.from(getContext()).inflate(R.layout.item_test, parent, false);
         }
-
         // Get the data item for this position
-        TitleTest typeOfTest = getItem(position);
-
+        TitleOfTest typeOfTest = getItem(position);
         // Lookup view for data population
         TextView testPrincipaleTitle = convertView.findViewById(R.id.testPrincipaleTitle);
-        TextView chapterAndDescription = convertView.findViewById(R.id.chapterAndDescription);
+        TextView testDescription = convertView.findViewById(R.id.description);
         // Populate the data into the template view using the data object
-        testPrincipaleTitle.setText(typeOfTest.getPrincipalTitle());
-        chapterAndDescription.setText(typeOfTest.getChapter());
+        testPrincipaleTitle.setText(typeOfTest.getTitleOfTest());
+        testDescription.setText(typeOfTest.getDescriptionOfTest());
         // Return the completed view to render on screen
         return convertView;
     }

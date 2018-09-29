@@ -1,7 +1,6 @@
 package com.example.gavir.appcrocerossa.Activity.TestSection;
 
 import android.app.Activity;
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
@@ -10,7 +9,7 @@ import android.widget.Toast;
 
 import com.example.gavir.appcrocerossa.Adapter.CustomTitleTestAdapter;
 import com.example.gavir.appcrocerossa.R;
-import com.example.gavir.appcrocerossa.SupportJavaClass.TitleTest;
+import com.example.gavir.appcrocerossa.SupportJavaClass.TitleOfTest;
 
 import java.util.ArrayList;
 
@@ -24,11 +23,8 @@ public class CustomListActivity extends Activity {
     }
 
     private void populateTitleTestList() {
-        // Construct the data source
-        ArrayList<TitleTest> arrayOfTests = TitleTest.getTest();
-
         // Create the adapter to convert the array to views
-        CustomTitleTestAdapter adapter = new CustomTitleTestAdapter(this, arrayOfTests);
+        CustomTitleTestAdapter adapter = new CustomTitleTestAdapter(this, TitleOfTest.arrayOfTitleOfTests());
         // Attach the adapter to a ListView
         ListView listView = findViewById(R.id.TypeOftests);
 
@@ -45,8 +41,10 @@ public class CustomListActivity extends Activity {
 
     public void prova(int position) {
         if (position == 1) {
-            Intent secondoModCap1Intent = new Intent(getApplicationContext(), QuestionsActivity.class);
+
+/*            Intent secondoModCap1Intent = new Intent(getApplicationContext(), QuestionsActivity.class);
             startActivity(secondoModCap1Intent);
+*/
         }
         if (position == 2) {
             Toast.makeText(CustomListActivity.this, "TEST 2", Toast.LENGTH_SHORT).show();
@@ -70,4 +68,5 @@ public class CustomListActivity extends Activity {
             Toast.makeText(CustomListActivity.this, "TEST 8", Toast.LENGTH_SHORT).show();
         }
     }
+
 }

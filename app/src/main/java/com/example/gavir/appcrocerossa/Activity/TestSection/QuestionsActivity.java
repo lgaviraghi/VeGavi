@@ -12,15 +12,16 @@ import android.widget.Toast;
 import com.example.gavir.appcrocerossa.R;
 
 public class QuestionsActivity extends AppCompatActivity {
-    int numberAnswer = 1;
-    TextView questionTitle;
-    TextView questionBody;
-    RadioButton choice1;
-    RadioButton choice2;
-    RadioButton choice3;
-    RadioButton choice4;
-    RadioGroup radioGroupChoice;
-    Button nextQuestionButton;
+
+    private int numberOfQuestion = 1;
+    private TextView questionTitle;
+    private TextView questionBody;
+    private RadioButton choice1;
+    private RadioButton choice2;
+    private RadioButton choice3;
+    private RadioButton choice4;
+    private RadioGroup radioGroupChoice;
+    private Button nextQuestionButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,11 +38,10 @@ public class QuestionsActivity extends AppCompatActivity {
         choice3 = findViewById(R.id.choice_3);
         choice4 = findViewById(R.id.choice_4);
         radioGroupChoice = findViewById(R.id.radioGroupAnswer);
-
         //Bottone nuova domanda
         nextQuestionButton = findViewById(R.id.next);
 
-        nextAnswer();
+        questions();
         nextQuestionButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -49,13 +49,12 @@ public class QuestionsActivity extends AppCompatActivity {
                 if (noRudioButtonChecked()) {
                     Toast.makeText(QuestionsActivity.this, "Scegli una risposta", Toast.LENGTH_SHORT).show();
                 } else {
-                    numberAnswer += 1;
+                    numberOfQuestion += 1;
                     clearRadioButton();
-                    nextAnswer();
+                    questions();
                 }
             }
         });
-
     }
 
     public boolean noRudioButtonChecked() {
@@ -73,9 +72,9 @@ public class QuestionsActivity extends AppCompatActivity {
         choice4.setChecked(false);
     }
 
-    public void nextAnswer() {
-        questionTitle.setText("Domanda " + numberAnswer + ":");
-        AnswersHelper.checkAnswerNumber(numberAnswer, questionBody, choice1, choice2, choice3, choice4, radioGroupChoice, getApplicationContext());
+    public void questions() {
+        questionTitle.setText("Domanda " + numberOfQuestion + ":");
 
+        //TODO query a db che restituisce le domande
     }
 }
